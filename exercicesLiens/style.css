@@ -1,0 +1,16 @@
+.active {
+    background-color: rgb(143, 143, 136);
+    font-weight: bold;
+    padding: 4px;
+    border-radius: 20px;
+}
+ul {
+    display: flex;
+    justify-content: space-around;
+}
+li {
+    margin: 12px;
+}
+h1,footer {
+    text-align: center;
+}
