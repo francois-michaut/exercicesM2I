@@ -2,10 +2,11 @@
     require_once "data.php";
     // var_dump($previsions);
     foreach($previsions as $value => $day) {
-        print_r(gettype($value));
+        echo $value . '<br>';
         $date = new DateTime($value);
-        $date->format('S');
-        var_dump($date);
+        // $date->format('l d n');
+        var_dump($date->format('l j F Y'));
+        // var_dump($date);
         // echo $value;
         // $value = new DateTime();
         // $value->format('l');
