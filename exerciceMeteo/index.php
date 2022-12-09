@@ -1,19 +1,7 @@
 <?php 
     require_once "data.php";
     // var_dump($previsions);
-    foreach($previsions as $value => $day) {
-        echo $value . '<br>';
-        $date = new DateTime($value);
-        // $date->format('l d n');
-        var_dump($date->format('l j F Y'));
-        // var_dump($date);
-        // echo $value;
-        // $value = new DateTime();
-        // $value->format('l');
-        // $value-> format('d');
-        // $value-> format('n');
-        // var_dump(new Datetime($value)format('l d n'));
-    }
+  
    
     
 ?>
@@ -32,7 +20,9 @@
         <table>
             <?php 
                 foreach($previsions as $key => $value) {
-                    echo '<tr><td>' . $key . '</td><td><img src=' . $value[FILENAME_K] . ' alt=' . $value[ALT_K] .'/></td><td>' . $value[TEMPS_K] . '</tr>';
+                 $date = new DateTime($key);
+
+                    echo '<tr><td>' . $date->format('l j F ') . '</td><td><img src=' . $value[FILENAME_K] . ' alt=' . $value[ALT_K] .'/></td><td>' . $value[TEMPS_K] . '</tr>';
                 }
             ?>
         </table>
